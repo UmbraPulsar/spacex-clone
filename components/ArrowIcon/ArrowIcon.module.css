@@ -1,0 +1,20 @@
+.Scroll__Arrow {
+	position: absolute;
+	bottom: 2vw;
+	left: 50%;
+	transform: translateX(-50%);
+	animation: bounceAndBlink 2s infinite;
+}
+@keyframes bounceAndBlink {
+	0%,
+	25%,
+	50%,
+	100% {
+		opacity: 0;
+		transform: translateY(-3vw);
+	}
+	40% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

@@ -1,0 +1,20 @@
+.Heading4 {
+	font-size: 1.25rem;
+	font-weight: 300;
+	animation: fadeInVertical 0.5s ease-in-out;
+}
+.Heading2 {
+	max-width: 30vw;
+	font-size: 3rem;
+	animation: fadeInVertical 0.5s ease-in-out 0.2s;
+	animation-fill-mode: both; /* Don't delete this, it's for section text aniamtions*/
+}
+
+@media screen and (max-width: 960px) {
+}
+@media screen and (max-width: 600px) {
+	.Heading2 {
+		max-width: 60vw;
+		font-size: 2rem;
+	}
+}

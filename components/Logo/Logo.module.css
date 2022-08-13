@@ -1,0 +1,13 @@
+.Page__Logo {
+	z-index: -1;
+	position: relative;
+	max-width: 15rem;
+}
+@media screen and (max-width: 960px) {
+}
+@media screen and (max-width: 600px) {
+	.Page__Logo {
+		max-width: 12rem;
+		margin: 0 auto;
+	}
+}

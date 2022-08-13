@@ -1,0 +1,39 @@
+.Footer {
+	position: relative;
+	padding: 2vw;
+}
+.Footer__Copy {
+	text-align: center;
+	color: #aaa;
+}
+.Footer__Social {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.Footer__Social li {
+	margin-right: 2rem;
+	color: #aaa;
+	text-transform: uppercase;
+	font-size: 0.9rem;
+	line-height: 2.5;
+}
+.Footer__Social li a {
+	color: white;
+	transition: color 0.6s;
+}
+.Footer__Social li a:hover {
+	color: #aaa;
+}
+@media screen and (max-width: 960px) {
+}
+@media screen and (max-width: 600px) {
+	.Footer__Copy {
+		text-align: center;
+		margin: 1rem;
+	}
+	.Footer__Social li {
+		margin: 0 1vw;
+	}
+}

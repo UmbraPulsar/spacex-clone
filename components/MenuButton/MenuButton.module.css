@@ -1,0 +1,150 @@
+.MenuButton {
+	z-index: 20;
+	background: none;
+	border: none;
+}
+.MenuButton__Rung {
+	display: block;
+	padding: 1px 1rem;
+	min-height: 2px;
+	min-width: 100%;
+	background-color: white;
+}
+.MenuButton__Rung:nth-child(2) {
+	margin: 0.25rem 0;
+}
+.MenuButton > * {
+	transition: transform 0.25s ease-in-out, opacity 0.6s ease-in-out;
+}
+/* Menu Dark Overlay */
+.Menu__Overlay {
+	z-index: -1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	min-width: 100%;
+	min-height: 100vh;
+	background-color: rgba(0, 0, 0, 0.75);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.Menu__Mobile {
+	z-index: -1;
+	position: absolute;
+	right: 0;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 90%;
+	min-height: 100vh;
+	background-color: rgb(20, 20, 20);
+	font-size: 1.25rem;
+	text-align: right;
+	text-transform: uppercase;
+	transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1),
+		box-shadow 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+	transform: translateX(100%);
+}
+.Menu__Mobile.open {
+	transform: translateX(0);
+}
+@media screen and (min-width: 600px) and (max-width: 900px) {
+	.Menu__Mobile {
+		min-width: 50%;
+	}
+}
+@media screen and (min-width: 900px) {
+	.Menu__Mobile {
+		min-width: 35vw;
+	}
+}
+.Menu__Mobile > ul {
+	width: 80%;
+}
+.Menu__Mobile > ul li {
+	padding: 0.5rem;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+	opacity: 0;
+	transform: translateY(100%);
+	transition: color 0.6s cubic-bezier(0.19, 1, 0.22, 1),
+		background-color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.Menu__Mobile > ul li:hover {
+	background-color: white;
+}
+.Menu__Mobile > ul li:hover a {
+	color: black;
+}
+.Menu__Mobile > ul li.FadeUp:nth-child(1) {
+	animation: FadeUp 250ms forwards 100ms;
+}
+.Menu__Mobile > ul li.FadeUp:nth-child(2) {
+	animation: FadeUp 250ms forwards 200ms;
+}
+.Menu__Mobile > ul li.FadeUp:nth-child(3) {
+	animation: FadeUp 250ms forwards 300ms;
+}
+.Menu__Mobile > ul li.FadeUp:nth-child(4) {
+	animation: FadeUp 250ms forwards 400ms;
+}
+.Menu__Mobile > ul li.FadeUp:nth-child(5) {
+	animation: FadeUp 250ms forwards 500ms;
+}
+.Menu__Mobile > ul li.FadeUp:nth-child(6) {
+	animation: FadeUp 250ms forwards 600ms;
+}
+.Menu__Mobile > ul li.FadeUp:nth-child(7) {
+	animation: FadeUp 250ms forwards 700ms;
+}
+.Menu__Mobile > ul li.FadeUp:nth-child(8) {
+	animation: FadeUp 250ms forwards 800ms;
+}
+.Menu__Mobile > ul li.FadeUp:nth-child(9) {
+	animation: FadeUp 250ms forwards 900ms;
+}
+.Menu__Mobile > ul li.FadeUp:nth-child(10) {
+	animation: FadeUp 250ms forwards 1s;
+}
+.Menu__Mobile > ul li.FadeUp:nth-child(11) {
+	animation: FadeUp 250ms forwards 1.1s;
+}
+.Menu__Mobile > ul li.FadeUp:nth-child(12) {
+	animation: FadeUp 250ms forwards 1.2s;
+}
+@keyframes FadeUp {
+	0% {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.Menu__Mobile > ul li:not(:first-child),
+.Menu__Mobile > ul li:not(:last-child) {
+	margin: 1rem 0;
+}
+.Menu__Mobile > ul li a {
+	position: relative;
+}
+.Menu__Mobile > ul li a::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	min-width: 100%;
+	height: 1px;
+	background: black;
+	transform-origin: right center;
+	transform: scaleX(0);
+	transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.Menu__Mobile > ul li:hover a::after {
+	transform-origin: left center;
+	transform: scaleX(1);
+	transition-duration: 0.4s;
+}
